@@ -22,10 +22,10 @@ void setup() {
 
   Serial.begin(9600);
 
-  // if (!rtc.begin()) {
+   if (!rtc.begin()) {
   //   Serial.println("RTC not initialised");
-  //   while (true);
-  // }
+     while (true);
+   }
   // Serial.println("RTC found");
 
   attachInterrupt(digitalPinToInterrupt(clk), encoder, FALLING);
